@@ -24,7 +24,7 @@ export default function Cart({ cart, handleUpdateCartQty, handleRemoveFromCart, 
 
         <div>
           <Button className={classes.emptyButtonTop} size="small" type="button" variant="contained" color="secondary" onClick={handleEmptyCart}>Empty Cart</Button>
-          <Button className={classes.checkoutButtonTop} size="small" type="button" variant="contained" color="primary">checkout</Button>
+          <Button component={Link} to="/checkout" className={classes.checkoutButtonTop} size="small" type="button" variant="contained" color="primary">checkout</Button>
         </div>
       </div>
 
@@ -40,7 +40,7 @@ export default function Cart({ cart, handleUpdateCartQty, handleRemoveFromCart, 
         <Typography variant="h4">subtotal: {cart.subtotal.formatted_with_symbol}</Typography>
         <div>
           <Button className={classes.emptyButton} size="large" type="button" variant="contained" color="secondary" onClick={handleEmptyCart}>Empty Cart</Button>
-          <Button className={classes.checkoutButton} size="large" type="button" variant="contained" color="primary">checkout</Button>
+          <Button component={Link} to="/checkout" className={classes.checkoutButton} size="large" type="button" variant="contained" color="primary">checkout</Button>
         </div>
       </div>
     </>
